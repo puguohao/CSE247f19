@@ -43,7 +43,8 @@ public class ProbD extends QuietAlgorithm {
 			j = j + 1;
 		}
 	}
-	
+	//平方和相加公式n(n+1)(2n+1)/6
+	//final tick result: n(n+1)(2n+1)/6
 	public String toString() {
 		return "Problem D";
 	}
