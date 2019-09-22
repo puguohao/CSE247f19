@@ -1,5 +1,5 @@
 -------------------
-CSE247 Robot tester starts testing heaps on 2019-09-14 03:07:48 -0500
+CSE247 Robot tester starts testing heaps on 2019-09-21 21:51:29 -0500
 
 ========
 Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-09-14 00:05
@@ -9,7 +9,40 @@ Your branch is up to date with 'origin/master'.
 HEAD is now at 1ab32bd add info
 No local changes to save
 
-Already up to date.
+Updating 1ab32bd..df3a275
+Fast-forward
+ RoboGrade/heaps-test.TestExtractMin.txt |  37 ++++++++++++
+ outputs/ProbA-ticks0.csv                | 100 ++++++++++++++++++++++++++++++++
+ outputs/ProbA-time0.csv                 | 100 ++++++++++++++++++++++++++++++++
+ outputs/list-addlast-notail-ticks0.csv  |  31 ++++++++++
+ outputs/list-addlast-notail-ticks1.csv  |   0
+ outputs/list-addlast-notail-ticks2.csv  |   0
+ outputs/list-addlast-notail-ticks3.csv  |   0
+ outputs/list-addlast-notail-ticks4.csv  |   0
+ outputs/list-addlast-notail-ticks5.csv  |   2 +
+ outputs/list-addlast-notail-time0.csv   |  31 ++++++++++
+ outputs/list-addlast-notail-time1.csv   |   0
+ outputs/list-addlast-notail-time2.csv   |   0
+ outputs/list-addlast-notail-time3.csv   |   0
+ outputs/list-addlast-notail-time4.csv   |   0
+ outputs/list-addlast-notail-time5.csv   |   2 +
+ studios/studio1/ProbD.java              |   3 +-
+ 16 files changed, 305 insertions(+), 1 deletion(-)
+ create mode 100644 RoboGrade/heaps-test.TestExtractMin.txt
+ create mode 100644 outputs/ProbA-ticks0.csv
+ create mode 100644 outputs/ProbA-time0.csv
+ create mode 100644 outputs/list-addlast-notail-ticks0.csv
+ create mode 100644 outputs/list-addlast-notail-ticks1.csv
+ create mode 100644 outputs/list-addlast-notail-ticks2.csv
+ create mode 100644 outputs/list-addlast-notail-ticks3.csv
+ create mode 100644 outputs/list-addlast-notail-ticks4.csv
+ create mode 100644 outputs/list-addlast-notail-ticks5.csv
+ create mode 100644 outputs/list-addlast-notail-time0.csv
+ create mode 100644 outputs/list-addlast-notail-time1.csv
+ create mode 100644 outputs/list-addlast-notail-time2.csv
+ create mode 100644 outputs/list-addlast-notail-time3.csv
+ create mode 100644 outputs/list-addlast-notail-time4.csv
+ create mode 100644 outputs/list-addlast-notail-time5.csv
 Going back in time to: 2019-09-14 00:05
 At hash 1ab32bdd361cec956982c9b8a0022ce4f7457645
 
@@ -20,12 +53,12 @@ Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-09-21 00:05
 ========
 Now in: /mnt/c/Users/coles/git/cse247-support-f19/GradingRepos/repos/labs-puguohao
 Your branch is up to date with 'origin/master'.
-HEAD is now at 1ab32bd add info
+HEAD is now at df3a275 lab 1 code
 No local changes to save
 
 Already up to date.
 Going back in time to: 2019-09-21 00:05
-At hash 1ab32bdd361cec956982c9b8a0022ce4f7457645
+At hash df3a2759200fe3e25a4da1befdb1a7f788307e84
 
 Running test for passcode...
 
@@ -33,5 +66,5 @@ Running test for passcode...
 Lab is not counted -- failed unit tests
 ================
 
-CSE247 Robot tester ends testing heaps on 2019-09-14 03:07:52 -0500
+CSE247 Robot tester ends testing heaps on 2019-09-21 21:51:42 -0500
 -------------------
