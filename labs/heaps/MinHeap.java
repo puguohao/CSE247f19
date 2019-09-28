@@ -66,6 +66,9 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[size] = ans;
+		ticker.tick(2);
+		decrease(size);
 		return ans;
 	}
 
@@ -99,7 +102,25 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// As described in lecture
 		//
-		
+		if(loc==1)
+			return;
+		int parentloc = loc/2;
+		ticker.tick();
+		if(array[loc].getValue().compareTo(array[parentloc].getValue())<0) {
+			moveItem(loc, parentloc);
+			decrease(parentloc);
+		}
+		return;	
+	}
+	
+	private void moveItem(int from, int to) {
+		Decreaser<T> d_from = array[from];
+		Decreaser<T> d_to = array[to];
+		d_from.loc = to;
+		d_to.loc = from;
+		array[to] = d_from;
+		array[from] = d_to;	
+		ticker.tick(6);
 	}
 	
 	/**
@@ -119,6 +140,13 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[1] = array [size];
+		array[1].loc = 1;
+		array[size] = null;
+		size--;
+		if (size > 1)
+			heapify(1);
+		ticker.tick(5);
 		return ans;
 	}
 
@@ -134,6 +162,26 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// As described in lecture
 		//  FIXME
 		//
+		if ((where*2+1)<=size){
+			T l = array[where*2].getValue();
+			T r = array[where*2+1].getValue();
+			ticker.tick(2);
+			if(array[where].getValue().compareTo(l)>0 || array[where].getValue().compareTo(r)>0){
+				if (l.compareTo(r)<0){
+					moveItem(where, where*2);
+					heapify(where*2);
+				}
+				else{
+					moveItem(where, where*2+1);
+					heapify(where*2+1);
+				}
+			}
+		}
+		else if (where * 2 == size) {
+			if(array[where].getValue().compareTo((array[size].getValue()))>0){
+				moveItem(where,size);
+			}
+		}
 	}
 	
 	/**

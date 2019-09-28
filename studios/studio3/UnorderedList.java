@@ -16,7 +16,7 @@ public class UnorderedList<T extends Comparable<T>> implements PriorityQueue<T> 
 		//
 		// FIXME
 		//
-		return false;
+		return this.list.isEmpty();
 	}
 
 	@Override
@@ -24,6 +24,7 @@ public class UnorderedList<T extends Comparable<T>> implements PriorityQueue<T> 
 		//
 		// FIXME
 		//
+		this.list.add(thing);
 	}
 
 	@Override
@@ -31,7 +32,12 @@ public class UnorderedList<T extends Comparable<T>> implements PriorityQueue<T> 
 		//
 		// FIXME
 		//
-		return null;
+		int min = 0;
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(min).compareTo(list.get(i))>0)
+				min = i;
+		}
+		return list.remove(min);
 	}
 
 }
