@@ -1,0 +1,68 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2019-10-13 20:09:41 -0500
+
+========
+Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-10-05 00:05
+========
+Now in: /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at aa04487 add MinHeap, heapticks.jpg
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2019-10-05 00:05
+At hash aa044876428bb0d80546c37d651fdf5cce064cc8
+
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247/cse247-f19-graders/ key puguohao testfilesource test/TestInsert package heaps repo ./GradingRepos/repos/labs-puguohao
+     [copy] Copying 1 file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestInsert
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Running test test.TestInsert
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+test:
+    [junit] Running heaps.test.TestInsert
+    [junit] Testsuite: heaps.test.TestInsert
+    [junit] Testing with heap size: 73
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+    [junit] Output:
+    [junit] Testing with heap size: 73
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing with heap size: 73
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testEmptyHeap took 0.026 sec
+    [junit] Testcase: testInsert took 0.111 sec
+    [junit] Testcase: testLocUpdatedDecrease took 0.006 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing heaps on 2019-10-13 20:09:46 -0500
+-------------------
