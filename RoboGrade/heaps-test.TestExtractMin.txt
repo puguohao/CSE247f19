@@ -1,70 +1,195 @@
 -------------------
-CSE247 Robot tester starts testing heaps on 2019-09-21 21:51:29 -0500
+CSE247 Robot tester starts testing heaps on 2019-10-13 22:19:05 -0500
 
 ========
-Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-09-14 00:05
+Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-10-05 00:05
 ========
-Now in: /mnt/c/Users/coles/git/cse247-support-f19/GradingRepos/repos/labs-puguohao
-Your branch is up to date with 'origin/master'.
-HEAD is now at 1ab32bd add info
+Now in: /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at aa04487 add MinHeap, heapticks.jpg
 No local changes to save
 
-Updating 1ab32bd..df3a275
+Updating aa04487..289380a
 Fast-forward
- RoboGrade/heaps-test.TestExtractMin.txt |  37 ++++++++++++
- outputs/ProbA-ticks0.csv                | 100 ++++++++++++++++++++++++++++++++
- outputs/ProbA-time0.csv                 | 100 ++++++++++++++++++++++++++++++++
- outputs/list-addlast-notail-ticks0.csv  |  31 ++++++++++
- outputs/list-addlast-notail-ticks1.csv  |   0
- outputs/list-addlast-notail-ticks2.csv  |   0
- outputs/list-addlast-notail-ticks3.csv  |   0
- outputs/list-addlast-notail-ticks4.csv  |   0
- outputs/list-addlast-notail-ticks5.csv  |   2 +
- outputs/list-addlast-notail-time0.csv   |  31 ++++++++++
- outputs/list-addlast-notail-time1.csv   |   0
- outputs/list-addlast-notail-time2.csv   |   0
- outputs/list-addlast-notail-time3.csv   |   0
- outputs/list-addlast-notail-time4.csv   |   0
- outputs/list-addlast-notail-time5.csv   |   2 +
- studios/studio1/ProbD.java              |   3 +-
- 16 files changed, 305 insertions(+), 1 deletion(-)
- create mode 100644 RoboGrade/heaps-test.TestExtractMin.txt
- create mode 100644 outputs/ProbA-ticks0.csv
- create mode 100644 outputs/ProbA-time0.csv
- create mode 100644 outputs/list-addlast-notail-ticks0.csv
- create mode 100644 outputs/list-addlast-notail-ticks1.csv
- create mode 100644 outputs/list-addlast-notail-ticks2.csv
- create mode 100644 outputs/list-addlast-notail-ticks3.csv
- create mode 100644 outputs/list-addlast-notail-ticks4.csv
- create mode 100644 outputs/list-addlast-notail-ticks5.csv
- create mode 100644 outputs/list-addlast-notail-time0.csv
- create mode 100644 outputs/list-addlast-notail-time1.csv
- create mode 100644 outputs/list-addlast-notail-time2.csv
- create mode 100644 outputs/list-addlast-notail-time3.csv
- create mode 100644 outputs/list-addlast-notail-time4.csv
- create mode 100644 outputs/list-addlast-notail-time5.csv
-Going back in time to: 2019-09-14 00:05
-At hash 1ab32bdd361cec956982c9b8a0022ce4f7457645
+ RoboGrade/heaps-test.TestInsert.txt | 68 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 68 insertions(+)
+ create mode 100644 RoboGrade/heaps-test.TestInsert.txt
+Going back in time to: 2019-10-05 00:05
+At hash aa044876428bb0d80546c37d651fdf5cce064cc8
 
-Running test for passcode...
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
 
-========
-Testing in ./GradingRepos/repos/labs-puguohao: heaps as of 2019-09-21 00:05
-========
-Now in: /mnt/c/Users/coles/git/cse247-support-f19/GradingRepos/repos/labs-puguohao
-Your branch is up to date with 'origin/master'.
-HEAD is now at df3a275 lab 1 code
-No local changes to save
+copytest:
+     [echo] would copy from /home/coles/git/cse247/cse247-f19-graders/ key puguohao testfilesource test/TestExtractMin package heaps repo ./GradingRepos/repos/labs-puguohao
+     [copy] Copying 1 file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/labs/heaps/test
 
-Already up to date.
-Going back in time to: 2019-09-21 00:05
-At hash df3a2759200fe3e25a4da1befdb1a7f788307e84
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
 
-Running test for passcode...
+compile:
+     [echo] Compiling heaps/MinHeap
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
 
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestExtractMin
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test test.TestExtractMin
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+test:
+    [junit] Running heaps.test.TestExtractMin
+    [junit] Testsuite: heaps.test.TestExtractMin
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Testing with duplicates size 50
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] done
+    [junit] Testing with unique vals size 2
+    [junit] done
+    [junit] Testing with unique vals size 3
+    [junit] done
+    [junit] Testing with unique vals size 4
+    [junit] done
+    [junit] Testing with unique vals size 5
+    [junit] done
+    [junit] Testing with unique vals size 6
+    [junit] done
+    [junit] Testing with unique vals size 7
+    [junit] done
+    [junit] Testing with unique vals size 8
+    [junit] done
+    [junit] Testing with unique vals size 9
+    [junit] done
+    [junit] Testing with unique vals size 50
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.463 sec
+    [junit] Output:
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Testing with duplicates size 50
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] done
+    [junit] Testing with unique vals size 2
+    [junit] done
+    [junit] Testing with unique vals size 3
+    [junit] done
+    [junit] Testing with unique vals size 4
+    [junit] done
+    [junit] Testing with unique vals size 5
+    [junit] done
+    [junit] Testing with unique vals size 6
+    [junit] done
+    [junit] Testing with unique vals size 7
+    [junit] done
+    [junit] Testing with unique vals size 8
+    [junit] done
+    [junit] Testing with unique vals size 9
+    [junit] done
+    [junit] Testing with unique vals size 50
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.463 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Testing with duplicates size 50
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] done
+    [junit] Testing with unique vals size 2
+    [junit] done
+    [junit] Testing with unique vals size 3
+    [junit] done
+    [junit] Testing with unique vals size 4
+    [junit] done
+    [junit] Testing with unique vals size 5
+    [junit] done
+    [junit] Testing with unique vals size 6
+    [junit] done
+    [junit] Testing with unique vals size 7
+    [junit] done
+    [junit] Testing with unique vals size 8
+    [junit] done
+    [junit] Testing with unique vals size 9
+    [junit] done
+    [junit] Testing with unique vals size 50
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExtractMinDups took 0.326 sec
+    [junit] Testcase: testExtractMinUniq took 0.04 sec
+    [junit] Testcase: testLocUpdatedHeapify took 0.032 sec
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
 ================
-Lab is not counted -- failed unit tests
+Lab is counted as working
 ================
 
-CSE247 Robot tester ends testing heaps on 2019-09-21 21:51:42 -0500
+CSE247 Robot tester ends testing heaps on 2019-10-13 22:19:19 -0500
 -------------------
