@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 //
@@ -29,6 +30,9 @@ public class StringTable {
     	buckets = new LinkedList[nBuckets];
 	
     	// TODO - fill in the rest of this method to initialize your table
+    	size = 0;
+    	for(int i=0; i<nBuckets; i++)
+    		buckets[i] = new LinkedList<Record>();
     }
     
     
@@ -42,8 +46,18 @@ public class StringTable {
     public boolean insert(Record r) 
     {  
     	// TODO - implement this method
-	
-    	return false;
+
+    	String key = r.key;
+    	//if key is already in table
+    	if(find(key) != null)
+    		return false;
+    	else {
+    		int hashCode = stringToHashCode(key);
+	    	int index = toIndex(hashCode);
+	    	buckets[index].add(r);
+	    	size++;
+	    	return true;
+    	}
     }
     
     
@@ -56,8 +70,18 @@ public class StringTable {
     public Record find(String key) 
     {
     	// TODO - implement this method
-	
-    	return null;
+    	int hashCode = stringToHashCode(key);
+    	int index = toIndex(hashCode);
+    	Record target = null;
+    	for(Record r : buckets[index])
+    		if(key.contentEquals(r.key)) {
+    			target = r;
+    			break;
+    		}
+    	if(target == null)
+    		return null;
+    	else
+    		return target;
     }
     
     
@@ -70,6 +94,21 @@ public class StringTable {
     public void remove(String key) 
     {
     	// TODO - implement this method
+    	if(find(key) == null)
+    		return;
+    	else {
+    		int hashCode = stringToHashCode(key);
+	    	int index = toIndex(hashCode);
+	    	Iterator<Record> itr = buckets[index].iterator();
+	    	while(itr.hasNext()) {
+	    		if(itr.next().key.equals(key)) {
+	    			itr.remove();
+	    			break;
+	    		}	
+	    	}
+	    	size--;
+    	}
+    	
     }
     
 
@@ -89,8 +128,10 @@ public class StringTable {
     private int toIndex(int hashcode)
     {
     	// Fill in your own hash function here
-	
-    	return 0;
+    	hashcode = Math.abs(hashcode);
+    	double A = (Math.sqrt(5) - 1.0) / 2.0;
+    	int index = (int)Math.floor(((hashcode*A) % 1.0) * nBuckets);
+    	return index;
     }
     
     
