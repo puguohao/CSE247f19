@@ -1,0 +1,81 @@
+-------------------
+CSE247 Robot tester starts testing hash on 2019-11-11 01:49:15 -0600
+
+========
+Testing in ./GradingRepos/repos/labs-puguohao: hash as of 2019-11-02 00:05
+========
+Now in: /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 1928ab0 robograde
+No local changes to save
+
+Updating 1928ab0..c3ff102
+Fast-forward
+ RoboGrade/heaps-test.TestMinHeap.txt |    217 +
+ labs/hash/StringTable.java           |     53 +-
+ labs/hash/output/case1-observed.txt  |     70 +-
+ labs/hash/output/case2-observed.txt  |   3426 +-
+ labs/hash/output/case3-observed.txt  | 324498 +-------------------------------
+ labs/hash/output/case4-observed.txt  | 298156 +----------------------------
+ 6 files changed, 393 insertions(+), 626027 deletions(-)
+ create mode 100644 RoboGrade/heaps-test.TestMinHeap.txt
+Going back in time to: 2019-11-02 00:05
+At hash c3ff102702b8b66944262546252c2f4c108d14a2
+
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247/cse247-f19-graders/ key puguohao testfilesource test/TestStringTableBasic package hash repo ./GradingRepos/repos/labs-puguohao
+     [copy] Copying 1 file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/labs/hash/test
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247/cse247-f19-graders/ key puguohao testfilesource SeqReader package hash repo ./GradingRepos/repos/labs-puguohao
+     [copy] Copying 1 file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/labs/hash
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Compiling the code
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling hash/StringTable
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling hash/test/TestStringTableBasic
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test test.TestStringTableBasic
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+test:
+    [junit] Running hash.test.TestStringTableBasic
+    [junit] Testsuite: hash.test.TestStringTableBasic
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.194 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.194 sec
+    [junit] 
+    [junit] Testcase: testFind took 0.103 sec
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.014 sec
+    [junit] Testcase: testZeroHash took 0.009 sec
+    [junit] Testcase: testInsert took 0.002 sec
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing hash on 2019-11-11 01:49:31 -0600
+-------------------
