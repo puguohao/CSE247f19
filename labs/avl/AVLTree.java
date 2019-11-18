@@ -129,6 +129,7 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root == null) {
 			// add new element as leaf of tree
 			TreeNode<T> newNode = new TreeNode<T>(value); 
+			updateHeight(newNode);
 			size++;
 			return newNode;
 	    } else {
@@ -144,8 +145,8 @@ public class AVLTree<T extends Comparable<T>> {
 	    		// still looking -- go right
 	    		root.setRight(insertHelper(value, root.right));
 	    	}
-	    
-	    	return root;
+	    	updateHeight(root);
+	    	return rebalance(root);
 	    }
 	}
 
@@ -184,6 +185,7 @@ public class AVLTree<T extends Comparable<T>> {
 	    			// so return whichever one is not null (or null
 	    			// if both are)
 	    			size--;
+	    			
 	    			return (root.left == null ? root.right : root.left);
 	    		} else {
 	    			// node with two subtrees -- replace key
@@ -201,8 +203,8 @@ public class AVLTree<T extends Comparable<T>> {
 	    		// still looking for element to remove -- go right
 	    		root.setRight(removeHelper(value, root.right));
 	    	}
-	    	
-	    	return root;
+	    	updateHeight(root);
+	    	return rebalance(root);
 	    }
 	}
 
@@ -222,8 +224,23 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private void updateHeight(TreeNode<T> root) {
 	    // FIXME: fill in the update code
+		
+		root.height = Math.max(getHeight(root.left), getHeight(root.right)) + 1;
+		
+//		if(root.left==null && root.right==null)
+//			root.height = 1;
+//		else if(root.left!=null && root.right==null)
+//			root.height = root.left.height + 1;
+//		else if(root.left==null && root.right!=null)
+//			root.height = root.right.height + 1;
+//		else
+//			root.height = Math.max(root.left.height, root.right.height) + 1;
 	}
-
+	
+	private int getHeight(TreeNode<T> root) {
+		return root == null? 0 : root.height;
+	}
+	
 	//
 	// getBalance()
 	// Return the balance factor of a subtree rooted at "root"
@@ -231,7 +248,19 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private int getBalance(TreeNode<T> root) {
 	    // FIXME: fill in the balance computation
-	    return 0;
+		int left_height = getHeight(root.left);
+		int right_height = getHeight(root.right);
+		
+		return right_height - left_height;
+		
+//		if(root.left==null && root.right==null)
+//			return 0;
+//		else if(root.left!=null && root.right==null)
+//			return -(root.left.height + 1);
+//		else if(root.left==null && root.right!=null)
+//			return -(root.right.height + 1);
+//		else
+//			return root.right.height - root.left.height;
 	}
 
 	//
@@ -244,7 +273,26 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rebalance(TreeNode<T> root) {
 	    // FIXME: fill in the rebalancing code
-	    return null;
+		if(getBalance(root) == -2) {
+			if(getBalance(root.left) == -1) {//rightRotate on root
+				return rightRotate(root);
+			}
+			else {//leftRotate on root.left
+				root.left = leftRotate(root.left);
+				return rightRotate(root);
+			}
+		}
+		else if(getBalance(root) == 2){
+			if(getBalance(root.right) == 1) {
+				return leftRotate(root);
+			}
+			else {
+				root.right = rightRotate(root.right);
+				return leftRotate(root);
+			}
+		}
+		else
+			return root;
 	}
 	
 	//
@@ -256,7 +304,19 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rightRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return null;
+		
+		TreeNode<T> root_left = root.left;
+		TreeNode<T> root_parent = root.parent;
+		
+		root.setLeft(root_left.right);
+		root_left.setRight(root);
+		root_left.parent = root_parent;
+		
+		root.height = Math.max(getHeight(root.left), getHeight(root.right)) + 1;
+		root_left.height = Math.max(getHeight(root_left.left), getHeight(root_left.right)) + 1;
+		
+		return root_left;
+
 	}
 
 	//
@@ -268,7 +328,20 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> leftRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return null;
+		
+		TreeNode<T> root_right = root.right;
+		TreeNode<T> root_parent = root.parent;
+		
+		root.setRight(root_right.left);
+		root_right.setLeft(root);
+		root_right.parent = root_parent;
+		
+		root.height = Math.max(getHeight(root.left), getHeight(root.right)) + 1;
+		root_right.height = Math.max(getHeight(root_right.left), getHeight(root_right.right)) + 1;
+		
+		return root_right;
+		
+		
 	}
 	
 	/////////////////////////////////////////////////////////////
