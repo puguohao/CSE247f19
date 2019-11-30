@@ -134,14 +134,12 @@ public class ShortestPaths {
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-    	Vertex end = endVertex;
-    	while(parentEdges.containsKey(end)) {
-    		Edge edge = parentEdges.get(endVertex);
-    		path.add(edge);
-    		end = edge.from;
-    	}
-
-    	return path;
+    	while(endVertex != startVertex){
+			Edge former = parentEdges.get(endVertex);
+			path.addFirst(former);
+			endVertex = former.from;
+		}
+		return path;
     }
     
     ////////////////////////////////////////////////////////////////
