@@ -7,6 +7,7 @@ package spath;
 
 import java.util.LinkedList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 // heap-related structures from Lab 3
 import heaps.Decreaser;
@@ -100,6 +101,23 @@ public class ShortestPaths {
     	// recording the parent edges of each vertex in parentEdges.
     	// FIXME
     	//
+    	while(!pq.isEmpty()) {
+    		VertexAndDist current = pq.extractMin();
+    		for(Edge edge : current.vertex.edgesFrom()) {
+    			Vertex vertexTo = edge.to;
+    			Decreaser<VertexAndDist> vertexToHandle = handles.get(vertexTo);
+    			VertexAndDist vertexToVD = vertexToHandle.getValue();
+    			if(current.distance + weights.get(edge) < vertexToVD.distance) { 	
+    				VertexAndDist newVD = new VertexAndDist(vertexTo, current.distance + weights.get(edge));
+    				vertexToHandle.decrease(newVD);
+    				parentEdges.put(vertexTo, edge);
+    			}
+    		}
+    		
+
+    			
+    		
+    	}
     }
     
     
@@ -116,7 +134,13 @@ public class ShortestPaths {
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-	
+    	Vertex end = endVertex;
+    	while(parentEdges.containsKey(end)) {
+    		Edge edge = parentEdges.get(endVertex);
+    		path.add(edge);
+    		end = edge.from;
+    	}
+
     	return path;
     }
     
