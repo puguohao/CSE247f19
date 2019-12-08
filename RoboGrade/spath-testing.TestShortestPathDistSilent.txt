@@ -1,0 +1,63 @@
+-------------------
+CSE247 Robot tester starts testing spath on 2019-12-08 07:53:32 -0600
+
+========
+Testing in ./GradingRepos/repos/labs-puguohao: spath as of 2019-12-07 00:05
+========
+Now in: /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 7254fd7 version 3
+No local changes to save
+
+Updating 7254fd7..7196056
+Fast-forward
+ RoboGrade/avl-test.TestBalancedTree.txt | 81 +++++++++++++++++++++++++++++++++
+ 1 file changed, 81 insertions(+)
+ create mode 100644 RoboGrade/avl-test.TestBalancedTree.txt
+Going back in time to: 2019-12-07 00:05
+At hash 719605656ca5afc161088ec2f82096d3723bca88
+
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247/cse247-f19-graders/ key puguohao testfilesource testing/TestShortestPathDistSilent package spath repo ./GradingRepos/repos/labs-puguohao
+     [copy] Copying 1 file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/labs/spath/testing
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling spath/ShortestPaths
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+compile:
+     [echo] Compiling spath/testing/TestShortestPathDistSilent
+    [javac] Compiling 1 source file to /home/coles/git/cse247/cse247-support-f19/GradingRepos/repos/labs-puguohao/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test testing.TestShortestPathDistSilent
+Buildfile: /home/coles/git/cse247/cse247-support-f19/build.xml
+
+test:
+    [junit] Running spath.testing.TestShortestPathDistSilent
+    [junit] Testsuite: spath.testing.TestShortestPathDistSilent
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.332 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.332 sec
+    [junit] 
+    [junit] Testcase: test took 9.279 sec
+
+BUILD SUCCESSFUL
+Total time: 11 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing spath on 2019-12-08 07:53:54 -0600
+-------------------
